@@ -8,12 +8,6 @@ const SearchBar = () => {
     const [option, setOption] = useState([]);
     const [data, setData] = useState([]);
 
-    // async function search(key) {
-    //     let result = await fetch(CONFIG.BASE_URL + "api/search-product/" + key);
-    //     result = await result.json();
-    //     setData(result);
-    // }
-
     useEffect(() => {
         axios.get('api/search-product').then(res => {
             if (res.status === 200) {

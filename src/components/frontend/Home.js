@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import * as CONFIG from '../../constants/config';
-import { useState } from 'react/cjs/react.development';
 import { Link } from 'react-router-dom';
 import swal from 'sweetalert';
 import { FaStar } from 'react-icons/fa';
