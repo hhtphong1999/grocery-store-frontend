@@ -1,8 +1,7 @@
 import axios from "axios";
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react/cjs/react.development";
 import * as CONFIG from '../../constants/config';
 import swal from 'sweetalert';
 
