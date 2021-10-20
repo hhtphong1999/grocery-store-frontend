@@ -1,19 +1,44 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from "axios";
 import { Link } from 'react-router-dom';
 import * as CONFIG from '../../../constants/config';
 import { FaStar } from 'react-icons/fa';
 
-const NewProductList = ({ productList, onAddProduct, onAddWishlist }) => {
+function FeaturedProducts({onAddProduct, onAddWishlist }) {
+
+    const [loading, setLoading] = useState(true);
+    const [featuredProduct, setFeaturedProduct] = useState([]);
+
+    useEffect(() => {
+        axios.get('/api/get-featured-product').then(res => {
+            if (res.status === 200) {
+                setFeaturedProduct(res.data.products);
+            }
+            setLoading(false);
+        });
+    }, []);
 
     const avgStarRating = (reviews) => {
         const avgStar = Math.round(reviews.reduce((a, c) => a + c.rating, 0) / reviews.length)
         return isNaN(avgStar) ? 0 : avgStar;
     }
 
+    if (loading) {
+        return <div id="page-preloader">
+            <div className="page-loading">
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+            </div>
+        </div>;
+    }
+
     return (
         <div className="row">
             {
-                productList.map(item => (
+                featuredProduct.map(item => (
                     <div key={item.id} className="col-md-3 col-sm-6 col-xs-12">
                         <div className="product-item">
                             <div className="product-image">
@@ -62,4 +87,4 @@ const NewProductList = ({ productList, onAddProduct, onAddWishlist }) => {
     );
 }
 
-export default NewProductList;
+export default FeaturedProducts;

@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router';
 import { useEffect, useState } from 'react';
 import swal from 'sweetalert';
-import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 import PublicRoutes from '../../routes/PublicRoutes';
@@ -118,6 +118,7 @@ const FrontendLayout = () => {
                             )
                         )
                     })}
+                    <Redirect to="/404" />
                 </Switch>
 
                 <Footer />

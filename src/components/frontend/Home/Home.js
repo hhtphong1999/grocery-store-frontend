@@ -1,54 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
-import * as CONFIG from '../../constants/config';
 import { Link } from 'react-router-dom';
 import swal from 'sweetalert';
-import { FaStar } from 'react-icons/fa';
 
-import NewProductList from './Products/NewProductList';
+import Slider from './Slider';
+import CategoryList from './CategoryList';
+import NewProduct from './NewProducts';
+import FeaturedProducts from './FeaturedProducts';
+import BestSellProducts from './BestSellProducts';
 
 function Home(props) {
 
-    const [loading, setLoading] = useState(true);
-    const [sliderList, setSliderList] = useState([]);
-    const [productList, setProductList] = useState([]);
-    const [featuredProduct, setFeaturedProduct] = useState([]);
-    const [bestSellerProduct, setBestSellerProduct] = useState([]);
-    const [categoryList, setCategoryList] = useState([]);
     const { onAddProduct } = props;
-
-    useEffect(() => {
-        axios.get('/api/get-slider').then(res => {
-            if (res.status === 200) {
-                setSliderList(res.data.sliders);
-            }
-        });
-
-        axios.get('/api/get-categories').then(res => {
-            if (res.status === 200) {
-                setCategoryList(res.data.categories);
-            };
-        });
-
-        axios.get('/api/get-new-product').then(res => {
-            if (res.status === 200) {
-                setProductList(res.data.products);
-            }
-        });
-
-        axios.get('/api/get-featured-product').then(res => {
-            if (res.status === 200) {
-                setFeaturedProduct(res.data.products);
-            }
-        });
-
-        axios.get('/api/get-bestseller-product').then(res => {
-            if (res.status === 200) {
-                setBestSellerProduct(res.data.products);
-            }
-            setLoading(false);
-        });
-    }, []);
 
     const onAddWishlist = (product_id) => {
         const data = { product_id: product_id };
@@ -64,25 +27,7 @@ function Home(props) {
         });
     }
 
-    const avgStarRating = (reviews) => {
-        const avgStar = Math.round(reviews.reduce((a, c) => a + c.rating, 0) / reviews.length)
-        return isNaN(avgStar) ? 0 : avgStar;
-    }
-
-    if (loading) {
-        return <div id="page-preloader">
-            <div className="page-loading">
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-            </div>
-        </div>;
-    }
-
     return (
-
         <div id="content" className="site-content">
             {/* <!-- Slideshow --> */}
             <div className="section slideshow">
@@ -90,17 +35,7 @@ function Home(props) {
                     <div className="tiva-slideshow-wrapper">
                         <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                             <div className="carousel-inner">
-                                {
-                                    sliderList.map((slider, index) => {
-                                        return (
-                                            <div key={slider.id} className={index === 0 ? 'carousel-item active' : 'carousel-item'}>
-                                                <Link to="#">
-                                                    <img className="d-block w-100" src={CONFIG.BASE_URL + `${slider.image}`} alt={slider.name} />
-                                                </Link>
-                                            </div>
-                                        )
-                                    })
-                                }
+                                <Slider />
                             </div>
                             <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -157,15 +92,7 @@ function Home(props) {
                                 </div>
 
                                 <div className="block-content">
-                                    {
-                                        categoryList.map(item => (
-                                            <div key={item.id} className="item">
-                                                <Link className="category-title" to={`/category/${item.slug}`}>
-                                                    {item.name}
-                                                </Link>
-                                            </div>
-                                        ))
-                                    }
+                                    <CategoryList />
                                 </div>
                             </div>
 
@@ -211,10 +138,10 @@ function Home(props) {
 
                                     <div className="tab-content" id="nav-tabContent">
                                         <div className="tab-pane fade show in active" id="new-arrivals" role="tabpanel" aria-labelledby="nav-home-tab">
-                                            <NewProductList productList={featuredProduct} onAddProduct={onAddProduct} onAddWishlist={onAddWishlist} />
+                                            <FeaturedProducts onAddProduct={onAddProduct} onAddWishlist={onAddWishlist} />
                                         </div>
                                         <div className="tab-pane fade" id="best-seller" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                            <NewProductList productList={bestSellerProduct} onAddProduct={onAddProduct} onAddWishlist={onAddWishlist} />
+                                            <BestSellProducts onAddProduct={onAddProduct} onAddWishlist={onAddWishlist} />
                                         </div>
                                     </div>
                                 </div>
@@ -228,52 +155,7 @@ function Home(props) {
 
                                 <div className="block-content">
                                     <div className="row">
-                                        {
-                                            productList.map((item) => (
-                                                <div key={item.id} className="product-item col-md-4 mr-3" style={{ maxWidth: '282px' }}>
-                                                    <div style={{ width: '75px' }} className="product-image">
-                                                        <Link to={`product-detail/${item.slug}`}>
-                                                            <img src={CONFIG.BASE_URL + `${item.image}`} alt={item.name} />
-                                                        </Link>
-                                                    </div>
-
-                                                    <div className="product-info">
-                                                        <div className="product-title">
-                                                            <Link to={`product-detail/${item.slug}`}>
-                                                                {item.name}
-                                                            </Link>
-                                                        </div>
-
-                                                        {[...Array(5)].map((star, i) => {
-                                                            const ratingValue = i + 1;
-                                                            return (
-                                                                <label key={i}>
-                                                                    <FaStar
-                                                                        className="rate-star"
-                                                                        color={ratingValue <= avgStarRating(item.reviews) ? "#ffc107" : "#e4e5e9"}
-                                                                    />
-                                                                </label>
-                                                            );
-                                                        })}
-
-                                                        <div className="product-price">
-                                                            <span className="sale-price">{CONFIG.CONVERT_TO_VND(item.selling_price)}</span>
-                                                            <span className="base-price">{CONFIG.CONVERT_TO_VND(item.original_price)}</span>
-                                                        </div>
-
-                                                        <div className="product-buttons">
-                                                            <button className="add-to-cart btn-link" onClick={() => onAddProduct(item, 1)}>
-                                                                <i className="fa fa-shopping-basket" aria-hidden="true"></i>
-                                                            </button>
-
-                                                            <button className="add-wishlist btn-link" onClick={() => onAddWishlist(item.id)}>
-                                                                <i className="fa fa-heart" aria-hidden="true"></i>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            ))
-                                        }
+                                        <NewProduct onAddProduct={onAddProduct} />
                                     </div>
                                 </div>
                             </div>

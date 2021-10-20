@@ -1,4 +1,4 @@
-import Home from "../components/frontend/Home";
+import Home from "../components/frontend/Home/Home";
 import ProductDetail from "../components/frontend/ProductDetail";
 import CategoryProduct from "../components/frontend/CategoryProduct";
 import BrandProduct from "../components/frontend/BrandProduct";
