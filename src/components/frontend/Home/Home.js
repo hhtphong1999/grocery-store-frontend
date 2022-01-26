@@ -56,22 +56,22 @@ function Home(props) {
                     <div className="row margin-10">
                         <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding-10">
                             <div className="banner-item effect">
-                                <Link to="#">
-                                    <img className="img-responsive" src="/assets/frontend/img/banner/home2-banner-1.png" alt="Banner 1" />
+                                <Link to="news/ve-ca-mau-thuong-thuc-lau-mm-u-minh">
+                                    <img className="img-responsive" style={{height: '250px'}} src="/assets/frontend/img/banner/lau-mam-u-minh-min.jpg" alt="Banner 1" />
                                 </Link>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding-10">
                             <div className="banner-item effect">
                                 <Link to="#">
-                                    <img className="img-responsive" src="/assets/frontend/img/banner/home2-banner-2.png" alt="Banner 2" />
+                                    <img className="img-responsive" style={{height: '250px'}} src="/assets/frontend/img/banner/8.jpg" alt="Banner 2" />
                                 </Link>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding-10">
                             <div className="banner-item effect">
                                 <Link to="#">
-                                    <img className="img-responsive" src="/assets/frontend/img/banner/home2-banner-3.png" alt="Banner 3" />
+                                    <img className="img-responsive" style={{height: '250px'}} src="/assets/frontend/img/banner/dac-san-ca-mau.png" alt="Banner 3" />
                                 </Link>
                             </div>
                         </div>
@@ -156,26 +156,6 @@ function Home(props) {
                                 <div className="block-content">
                                     <div className="row">
                                         <NewProduct onAddProduct={onAddProduct} />
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* <!-- Banners --> */}
-                            <div className="section banners-block">
-                                <div className="row margin-15">
-                                    <div className="col-lg-6 col-md-6 col-sm-6 padding-15">
-                                        <div className="banner-item effect">
-                                            <Link to="#">
-                                                <img className="img-responsive" src="/assets/frontend/img/banner/home2-banner-4.png" alt="Banner" />
-                                            </Link>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-6 col-md-6 col-sm-6 padding-15">
-                                        <div className="banner-item effect">
-                                            <Link to="#">
-                                                <img className="img-responsive" src="/assets/frontend/img/banner/home2-banner-5.png" alt="Banner" />
-                                            </Link>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

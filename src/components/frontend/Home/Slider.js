@@ -33,7 +33,7 @@ function Slider() {
         sliderList.map((slider, index) => {
             return (
                 <div key={slider.id} className={index === 0 ? 'carousel-item active' : 'carousel-item'}>
-                    <Link to="#">
+                    <Link to={slider.url}>
                         <img className="d-block w-100" src={CONFIG.BASE_URL + `${slider.image}`} alt={slider.name} />
                     </Link>
                 </div>

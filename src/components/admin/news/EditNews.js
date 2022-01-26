@@ -12,7 +12,8 @@ function EditNews(props) {
     const [newsInput, setNews] = useState({
         title: '',
         slug: '',
-        excerpt: ''
+        excerpt: '',
+        view_360: ''
     });
     const [body, setBody] = useState('');
     const inputHandler = (event, editor) => {
@@ -62,6 +63,7 @@ function EditNews(props) {
         formData.append('title', newsInput.title);
         formData.append('slug', newsInput.slug);
         formData.append('excerpt', newsInput.excerpt);
+        formData.append('view_360', newsInput.view_360);
         formData.append('body', body);
         formData.append('thumbnail', thumbnail.image);
         formData.append('status', status.status ? 1 : 0);
@@ -146,6 +148,16 @@ function EditNews(props) {
                                             <label>Trích đoạn</label>
                                             <input type="text" name="excerpt" onChange={handleInput} value={newsInput.excerpt} className="form-control" required></input>
                                             <small className="text-danger">{errors.excerpt}</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <div className="form-group">
+                                            <label>Ảnh 360 độ</label>
+                                            <input type="text" name="view_360" onChange={handleInput} value={newsInput.view_360} className="form-control"></input>
+                                            <small className="text-danger">{errors.view_360}</small>
                                         </div>
                                     </div>
                                 </div>

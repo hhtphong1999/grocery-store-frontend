@@ -45,10 +45,10 @@ function Header(props) {
                         <div className="col-md-7 col-sm-7 col-xs-12">
                             <div className="topbar-left d-flex">
                                 <div className="email">
-                                    <i className="fa fa-envelope" aria-hidden="true"></i>Email: hhtphong1999@gmail.com
+                                    <i className="fa fa-envelope" aria-hidden="true"></i>Email: 170501703@student.bdu.edu.vn
                                 </div>
                                 <div className="skype">
-                                    <i className="fa fa-skype" aria-hidden="true"></i>Skype: hhtphong1999
+                                    <i className="fa fa-skype" aria-hidden="true"></i>Skype: thtoan1999
                                 </div>
                             </div>
                         </div>
@@ -92,39 +92,6 @@ function Header(props) {
                                                     </div>
                                                 )
                                         }
-                                    </div>
-                                </div>
-
-                                {/* <!-- Language --> */}
-                                <div className="dropdown language">
-                                    <div className="dropdown-toggle" data-toggle="dropdown">
-                                        <img src="/assets/frontend/img/language-en.jpg" alt="Language English" />
-                                    </div>
-                                    <div className="dropdown-menu">
-                                        <div className="item">
-                                            <a href="#" title="Language English"><img src="/assets/frontend/img/language-en.jpg" alt="Language English" /> English</a>
-                                        </div>
-                                        <div className="item">
-                                            <a href="#" title="Language French"><img src="/assets/frontend/img/language-fr.jpg" alt="Language French" /> French</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* <!-- Currency --> */}
-                                <div className="dropdown currency">
-                                    <div className="dropdown-toggle" data-toggle="dropdown">
-                                        USD
-                                    </div>
-                                    <div className="dropdown-menu">
-                                        <div className="item">
-                                            <a href="#" title="USD">USD</a>
-                                        </div>
-                                        <div className="item">
-                                            <a href="#" title="EUR">EUR</a>
-                                        </div>
-                                        <div className="item">
-                                            <a href="#" title="GBP">GBP</a>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -172,7 +139,7 @@ function Header(props) {
                                     </li>
 
                                     <li>
-                                        <Link to="/news" title="News">Tin tức</Link>
+                                        <Link to="/news" title="News">Tin tức & Blog</Link>
                                     </li>
 
                                     <li>

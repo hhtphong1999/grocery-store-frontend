@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory, Redirect } from 'react-router-dom';
 import swal from 'sweetalert';
 
 function Login() {
@@ -48,7 +48,9 @@ function Login() {
     };
 
     return (
-        <div className="hold-transition login-page">
+        localStorage.getItem('auth_token') ?
+        <Redirect to="/admin/dashboard" /> :
+        (<div className="hold-transition login-page">
             <div className="login-box">
                 <div className="login-logo">
                     <b>Admin</b> Login
@@ -99,7 +101,7 @@ function Login() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div>)
     );
 }
 

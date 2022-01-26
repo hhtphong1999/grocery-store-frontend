@@ -17,8 +17,8 @@ const RevenueLineChart = ({data}) => {
                 }}
             >
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="month" tick="false" />
-                <YAxis type="number" domain={['auto', 'auto']} />
+                <XAxis dataKey="month" />
+                <YAxis type="number" dataKey={(v)=>parseInt(v.total)} domain={[0, 'dataMax+1000']}  />
                 <Tooltip />
                 <Legend />
                 <Line type="monotone" dataKey="total" stroke="#8884d8" activeDot={{ r: 8 }} />

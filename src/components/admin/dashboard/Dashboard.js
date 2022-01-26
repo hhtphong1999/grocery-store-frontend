@@ -93,7 +93,7 @@ function Dashboard() {
                                 <div className="icon">
                                     <i className="ion ion-person-add"></i>
                                 </div>
-                                <label className="small-box-footer"><i class="fas fa-users"></i></label>
+                                <label className="small-box-footer"><i className="fas fa-users"></i></label>
                             </div>
                         </div>
                         {/* <!-- ./col --> */}
@@ -108,7 +108,7 @@ function Dashboard() {
                                 <div className="icon">
                                     <i className="ion ion-pie-graph"></i>
                                 </div>
-                                <label className="small-box-footer"><i class="fas fa-hand-holding-usd"></i></label>
+                                <label className="small-box-footer"><i className="fas fa-hand-holding-usd"></i></label>
                             </div>
                         </div>
                         {/* <!-- ./col --> */}
@@ -161,7 +161,7 @@ function Dashboard() {
                         <div className="card">
                                 <div className="card-header">
                                     <h3 className="card-title text-lg">
-                                        <i class="fas fa-dollar-sign mr-1"></i>
+                                        <i className="fas fa-dollar-sign mr-1"></i>
                                         Doanh thu tháng
                                     </h3>
 

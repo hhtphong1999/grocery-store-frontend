@@ -95,6 +95,14 @@ function NewsDetail(props) {
                                         className="not-found-controller"
                                         dangerouslySetInnerHTML={{ __html: news.body }}
                                     />
+
+                                {
+                                    news.view_360 !== null ?
+                                    news.view_360 !== '' ?
+                                    <iframe src={`${news.view_360}`} width="800" height="600" style={{ border: '0' }} allowFullScreen="" loading="lazy"></iframe> :
+                                    '':
+                                    ''
+                                }
                                 </div>
 
                                 <div className="post-meta border-bottom">

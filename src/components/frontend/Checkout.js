@@ -36,9 +36,11 @@ function Checkout(props) {
         axios.get('/api/get-default-address').then(res => {
             if (res.data.status === 200) {
                 setDefaultAddress(res.data.address);
+            } else {
+                setDefaultAddress(checkoutInput)
             }
         })
-    }, [history]);
+    }, [history, checkoutInput]);
 
     const handleInput = (e) => {
         e.persist();
@@ -254,7 +256,7 @@ function Checkout(props) {
                                                         <input className="mr-2" name="payment" checked={payment === "0"} value="0" onChange={(e) => { setPayment(e.target.value) }} type="radio" defaultChecked />Thanh toán khi nhận hàng
                                                     </div>
                                                     <div className="item">
-                                                        <input className="mr-2" name="payment" checked={payment === "1"} value="1" onChange={(e) => { setPayment(e.target.value) }} type="radio" />Thanh toán qua ví Momo (chuyển đến ví Momo - 0944.987.333 - Huỳnh Thanh Phong kèm nội dung là SĐT người nhận)
+                                                        <input className="mr-2" name="payment" checked={payment === "1"} value="1" onChange={(e) => { setPayment(e.target.value) }} type="radio" />Thanh toán qua ví Momo (chuyển đến ví Momo - 0945.470.652 - Trần Hữu Toàn kèm nội dung là SĐT người nhận)
                                                     </div>
                                                 </div>
                                             </div>
