@@ -76,7 +76,7 @@ const Footer = () => {
 												<i className="zmdi zmdi-home"></i>
 											</div>
 											<div>
-												<span>110 đường số 28, phường 6, quận Gò Vấp, Ho Chi Minh</span>
+												<span>3 Lê Thị Riêng, Phường 5, Thành phố Cà Mau, Cà Mau 970000</span>
 											</div>
 										</div>
 										<div className="item d-flex">
@@ -84,7 +84,7 @@ const Footer = () => {
 												<i className="zmdi zmdi-phone-in-talk"></i>
 											</div>
 											<div>
-												<span>0944-987-333<br />0929-356-454</span>
+												<span>0945-470-652<br />0929-356-454</span>
 											</div>
 										</div>
 										<div className="item d-flex">
@@ -92,7 +92,7 @@ const Footer = () => {
 												<i className="zmdi zmdi-email"></i>
 											</div>
 											<div>
-												<span>hhtphong1999@gmail.com<br />1711545635@ntt.edu.vn</span>
+												<span>170501016@student.bdu.edu.vn<br />170501703@student.bdu.edu.vn</span>
 											</div>
 										</div>
 									</div>

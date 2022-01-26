@@ -86,8 +86,8 @@ function Contact() {
                                     <div className="item-right d-flex">
                                         <div className="title">Địa chỉ:</div>
                                         <div className="content">
-                                            110 đường số 28, phường 6, quận Gò Vấp<br />
-                                            Ho Chi Minh City, Vietnam
+                                            3 Lê Thị Riêng, Phường 5, Thành phố Cà Mau<br />
+                                            Tỉnh Cà Mau, Việt Nam
                                         </div>
                                     </div>
                                 </div>
@@ -101,7 +101,7 @@ function Contact() {
                                     <div className="item-right d-flex">
                                         <div className="title">Holine:</div>
                                         <div className="content">
-                                            0944-987-333<br />
+                                            0945-470-652<br />
                                             0929-356-454
                                         </div>
                                     </div>
@@ -112,9 +112,9 @@ function Contact() {
 
                     <div className="contact-map">
                         <div id="map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.5717061498312!2d106.6785921141057!3d10.844051760908734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528520d5b84fd%3A0x157c7a6aec79f49c!2zMTEwIMSQxrDhu51uZyBT4buRIDI4LCBQaMaw4budbmcgNiwgR8OyIFbhuqVwLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1631852524438!5m2!1svi!2s" width="1100" height="500" style={{ border: '0' }} allowFullScreen="" loading="lazy"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3938.6546173551787!2d105.16468121409461!3d9.185594089047523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a149b1fcaae087%3A0xd2eb5b48e3a6332!2zQsOsbmggRMawxqFuZyBVbml2ZXJzaXR5!5e0!3m2!1sen!2s!4v1643172828307!5m2!1sen!2s" width="1100" height="500" style={{ border: '0' }} allowFullScreen="" loading="lazy"></iframe>
                         </div>
-                        <div className="hidden-lg hidden-md hidden-sm hidden-xs contact-address">815 Sunset Boulevard Ca 70079</div>
+                        <div className="hidden-lg hidden-md hidden-sm hidden-xs contact-address">3 Lê Thị Riêng, Phường 5, Thành phố Cà Mau, Cà Mau 970000</div>
                     </div>
 
                     <div className="contact-intro">
