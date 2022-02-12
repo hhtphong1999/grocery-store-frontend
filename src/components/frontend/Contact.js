@@ -71,8 +71,8 @@ function Contact() {
                                     <div className="item-right d-flex">
                                         <div className="title">Email:</div>
                                         <div className="content">
-                                            <a href="#">hhtphong1999@gmail.com</a><br />
-                                            <a href="#">1711545635@ntt.edu.vn</a>
+                                            <a href="#">170501016@student.bdu.edu.vn</a><br />
+                                            <a href="#">170501703@student.bdu.edu.vn</a>
                                         </div>
                                     </div>
                                 </div>

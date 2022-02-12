@@ -35,15 +35,15 @@ const Footer = () => {
 
 						<div className="col-lg-3 col-md-3 col-sm-6 col-xs-12 footer-col">
 							<div className="block menu">
-								<h2 className="block-title">Information</h2>
+								<h2 className="block-title">Thông tin</h2>
 
 								<div className="block-content">
 									<ul>
-										<li><a href="#">Specials</a></li>
-										<li><a href="#">New products</a></li>
-										<li><a href="#">Best sellers</a></li>
-										<li><Link to="/about-us">About us</Link></li>
-										<li><Link to="/contact">Contact us</Link></li>
+										<li><a href="#">Nổi bật</a></li>
+										<li><a href="#">Sản phẩm mới</a></li>
+										<li><a href="#">Sản phẩm bán chạy</a></li>
+										<li><Link to="/about-us">Về chúng tôi</Link></li>
+										<li><Link to="/contact">Liên hệ</Link></li>
 									</ul>
 								</div>
 							</div>
@@ -51,15 +51,15 @@ const Footer = () => {
 
 						<div className="col-lg-3 col-md-3 col-sm-6 col-xs-12 footer-col">
 							<div className="block menu">
-								<h2 className="block-title">Account</h2>
+								<h2 className="block-title">Tài khoản</h2>
 
 								<div className="block-content">
 									<ul>
-										<li><Link to="/my-order">My orders</Link></li>
-										<li><Link to="/my-account">My account</Link></li>
-										<li><Link to="/my-wishlist">My wishlist</Link></li>
-										<li><Link to="/user-login">Login</Link></li>
-										<li><Link to="/user-register">Register</Link></li>
+										<li><Link to="/my-order">Đơn đặt hàng</Link></li>
+										<li><Link to="/my-account">Tài khoản</Link></li>
+										<li><Link to="/my-wishlist">Sản phẩm yêu thích</Link></li>
+										<li><Link to="/user-login">Đăng nhập</Link></li>
+										<li><Link to="/user-register">Đăng ký</Link></li>
 									</ul>
 								</div>
 							</div>
@@ -67,7 +67,7 @@ const Footer = () => {
 
 						<div className="col-lg-3 col-md-3 col-sm-6 col-xs-12 footer-col">
 							<div className="block text">
-								<h2 className="block-title">Contact Us</h2>
+								<h2 className="block-title">Thông tin liên hệ</h2>
 
 								<div className="block-content">
 									<div className="contact">

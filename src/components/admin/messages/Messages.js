@@ -16,7 +16,7 @@ const Messages = ({ loading, messages, deleteMessage }) => {
                 <td className="text-center">{CONFIG.CONVERT_DATETIME(message.created_at)}</td>
                 <td>{message.message}</td>
                 <td className="text-center">
-                    <button type="button" onClick={(e) => deleteMessage(e, message.id)} className="btn2 btn2-danger2 btn2-lg" style={{ width: '70px' }}>Delete</button>
+                    <button type="button" onClick={(e) => deleteMessage(e, message.id)} className="btn2 btn2-danger2 btn2-lg" style={{ width: '70px' }}>Xoá</button>
                 </td>
             </tr>
         ))

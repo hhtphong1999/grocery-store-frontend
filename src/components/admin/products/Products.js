@@ -18,8 +18,8 @@ const Products = ({ loading, products, deleteProduct }) => {
                     <td>{CONFIG.CONVERT_TO_VND(item.selling_price)}</td>
                     <td>
                         {item.status === 0 ?
-                            <label className="btn2 btn2-success btn2-lg w-100" >Active</label> :
-                            <label className="btn2 btn2-warning2 btn2-lg w-100" >Deactive</label>}
+                            <label className="btn2 btn2-success btn2-lg w-100" >Hiện</label> :
+                            <label className="btn2 btn2-warning2 btn2-lg w-100" >Ẩn</label>}
                     </td>
                     <td>
                         <a href={CONFIG.BASE_URL + `${item.image}`} rel="noreferrer" target="_blank" >
@@ -27,8 +27,8 @@ const Products = ({ loading, products, deleteProduct }) => {
                         </a>
                     </td>
                     <td className="text-center">
-                        <Link to={`edit-product/${item.id}`} className="btn2 btn2-primary2 btn2-lg mr-3">Edit</Link>
-                        <button type="button" onClick={(e) => deleteProduct(e, item.id)} className="btn2 btn2-danger2 btn2-lg">Delete</button>
+                        <Link to={`edit-product/${item.id}`} className="btn2 btn2-primary2 btn2-lg mr-3">Sửa</Link>
+                        <button type="button" onClick={(e) => deleteProduct(e, item.id)} className="btn2 btn2-danger2 btn2-lg">Xoá</button>
                     </td>
                 </tr>
             )
